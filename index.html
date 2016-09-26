@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>AdBlock detection</title>
+</head>
+<body>
+    <h2 id="result">AdBlock is</h2>
+
+    <script src="advert.js"></script>
+    <script>
+        if (!('ab' in window)) { window.ab = true; }
+        var result = document.getElementById('result');
+        if (window.ab == true) {
+            result.innerHTML = 'AdBlock on';
+        } else {
+            result.innerHTML = 'AdBlock off';
+        }
+    </script>
+</body>
+</html>
